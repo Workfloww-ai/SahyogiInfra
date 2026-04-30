@@ -1,16 +1,16 @@
 import { motion } from "motion/react";
-import { 
-  Users, 
-  Search, 
-  Briefcase, 
-  CheckCircle2, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Globe, 
-  Clock, 
-  ShieldCheck, 
-  Building2, 
+import {
+  Users,
+  Search,
+  Briefcase,
+  CheckCircle2,
+  MapPin,
+  Phone,
+  Mail,
+  Globe,
+  Clock,
+  ShieldCheck,
+  Building2,
   ChevronRight,
   Menu,
   X,
@@ -21,9 +21,9 @@ import {
 import { useState } from "react";
 
 const industries = [
-  "Infrastructure", "Construction", "Manufacturing", "FMCG", "Retail", 
-  "Logistics & Supply Chain", "F&B / QSR", "Hospitality", "Healthcare", 
-  "Real Estate", "Energy & Power", "IT / ITES", "Telecom", "Automotive", 
+  "Infrastructure", "Construction", "Manufacturing", "FMCG", "Retail",
+  "Logistics & Supply Chain", "F&B / QSR", "Hospitality", "Healthcare",
+  "Real Estate", "Energy & Power", "IT / ITES", "Telecom", "Automotive",
   "Agriculture", "Education", "Banking & Finance", "Government & PSU"
 ];
 
@@ -88,10 +88,10 @@ const processSteps = [
 
 const Logo = ({ className = "" }: { className?: string }) => (
   <div className={`relative flex items-center justify-center ${className}`}>
-    <img 
-      src="/logo.png" 
-      alt="SahYogi InfraCare Logo" 
-      className="h-16 w-auto md:h-20 object-contain drop-shadow-sm" 
+    <img
+      src="/logo.png"
+      alt="SahYogi InfraCare Logo"
+      className="h-16 w-auto md:h-20 object-contain drop-shadow-sm"
     />
   </div>
 );
@@ -106,7 +106,7 @@ export default function App() {
     yourRequirement: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{type: 'success' | 'error', message: string} | null>(null);
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -116,16 +116,16 @@ export default function App() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-    
+
     try {
       const response = await fetch('http://localhost:5001/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
-      
+
       const data = await response.json();
-      
+
       if (response.ok && data.success) {
         setSubmitStatus({ type: 'success', message: 'Your enquiry has been submitted successfully. We will get back to you shortly.' });
         setFormData({
@@ -160,19 +160,19 @@ export default function App() {
         <nav className="hidden lg:flex gap-10 text-[11px] uppercase tracking-widest text-sage font-sans font-bold italic">
           <a href="#staffing" className="hover:text-clay transition-colors">Staffing</a>
           <a href="#hospitality" className="hover:text-clay transition-colors">Hospitality</a>
-          <a href="#industries" className="hover:text-clay transition-colors">Industries</a>
+          {/* <a href="#industries" className="hover:text-clay transition-colors">Industries</a> */}
           <a href="#about" className="hover:text-clay transition-colors">About</a>
           <a href="#contact" className="hover:text-clay transition-colors">Contact</a>
         </nav>
 
         <div className="flex items-center gap-4">
-          <a 
+          <a
             href="#contact"
             className="hidden sm:block bg-clay text-white px-6 py-3 rounded text-[11px] uppercase tracking-widest font-bold font-sans hover:bg-clay/90 transition-all shadow-md shadow-clay/20"
           >
             Enquire Now
           </a>
-          <button 
+          <button
             className="lg:hidden text-moss"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -183,7 +183,7 @@ export default function App() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="lg:hidden bg-sand border-b border-moss/10 p-6 absolute w-full z-[99] font-sans font-bold text-sm uppercase tracking-widest text-sage"
@@ -194,8 +194,8 @@ export default function App() {
             <a href="#industries" onClick={() => setIsMenuOpen(false)}>Industries</a>
             <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
             <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               onClick={() => setIsMenuOpen(false)}
               className="bg-clay text-white w-full py-4 rounded text-center"
             >
@@ -219,7 +219,7 @@ export default function App() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-moss rounded-full blur-[150px] opacity-[0.05]"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-clay rounded-full blur-[150px] opacity-[0.05]"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -246,13 +246,13 @@ export default function App() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <a 
+              <a
                 href="#contact"
                 className="bg-clay text-white px-8 py-4 rounded font-sans text-xs uppercase tracking-widest font-bold hover:shadow-xl hover:shadow-clay/30 transition-all flex items-center gap-3"
               >
                 Enquire for Business <ArrowRight size={16} />
               </a>
-              <a 
+              <a
                 href="#about"
                 className="border border-moss/20 text-moss px-8 py-4 rounded font-sans text-xs uppercase tracking-widest font-bold hover:bg-moss/5 transition-all text-center"
               >
@@ -350,11 +350,11 @@ export default function App() {
               Every single time. No ambiguity.
             </p>
           </div>
-          
+
           <div className="relative">
             {/* Connecting Line (Desktop) */}
             <div className="hidden lg:block absolute top-[3.25rem] left-0 w-full h-[1px] bg-slate/10 z-0"></div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-8 relative z-10">
               {processSteps.map((step, i) => (
                 <div key={i} className="flex flex-col items-center text-center">
@@ -384,7 +384,7 @@ export default function App() {
             <div>
               <h2 className="text-4xl md:text-6xl mb-8 leading-tight">Why Clients Stay <span className="text-clay italic">With Us</span>.</h2>
               <p className="font-sans text-lg text-sand/60 mb-12 italic">Long-term partnerships built on four unbreakable pillars.</p>
-              
+
               <div className="grid sm:grid-cols-2 gap-8">
                 {[
                   { icon: <ShieldCheck className="text-clay" />, title: "Compliance-First", desc: "Zero audit surprises. PF, ESIC, and legal handled precisely." },
@@ -402,7 +402,7 @@ export default function App() {
                 ))}
               </div>
             </div>
-            
+
             <div className="bg-sand/10 backdrop-blur-md p-10 md:p-16 rounded-3xl border border-sand/10">
               <div className="flex items-center gap-6 mb-12 p-8 bg-moss rounded-2xl border border-sand/5">
                 <div className="flex-shrink-0 w-20 h-20 bg-clay rounded-full flex items-center justify-center text-white">
@@ -431,11 +431,11 @@ export default function App() {
               viewport={{ once: true }}
             >
               <span className="font-sans text-xs uppercase tracking-[0.4em] text-clay font-bold block mb-4 italic">Hospitality Division</span>
-              <h2 className="text-4xl md:text-6xl text-slate mb-8 leading-tight">Properties managed. <br/>Experiences <span className="text-clay italic">delivered.</span></h2>
+              <h2 className="text-4xl md:text-6xl text-slate mb-8 leading-tight">Properties managed. <br />Experiences <span className="text-clay italic">delivered.</span></h2>
               <p className="font-sans text-lg text-sage leading-relaxed mb-10 italic">
                 SahYogi InfraCare brings an operator’s discipline to hospitality asset management. We run leisure resorts, managed apartments, and service residences.
               </p>
-              
+
               <div className="bg-moss p-10 rounded-3xl text-sand shadow-2xl relative overflow-hidden group">
                 <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:scale-110 transition-transform">
                   <Hotel size={200} />
@@ -488,43 +488,43 @@ export default function App() {
       {/* About / MD Section */}
       <section id="about" className="py-24 px-6 md:px-16 bg-cream/50">
         <div className="max-w-7xl mx-auto">
-           <div className="grid lg:grid-cols-2 gap-20 items-center">
-             <div>
-                <span className="font-sans text-xs uppercase tracking-[0.4em] text-clay font-bold block mb-4 italic">The SahYogi Way</span>
-                <h2 className="text-4xl md:text-6xl text-slate mb-10 leading-tight">Legacy of Operational <br/><span className="text-clay italic">Credibility.</span></h2>
-                <div className="space-y-8">
-                  {[
-                    { title: "Pan-India Reach", desc: "Operating across all major states, combining national strength with local market intelligence." },
-                    { title: "Compliance Without Compromise", desc: "PF, ESIC, TDS, and labour laws embedded in every engagement. No legal exposure." },
-                    { title: "Sector Breadth", desc: "From energy projects to retail chains to leisure destinations—we bring context and depth." }
-                  ].map((item, i) => (
-                    <div key={i} className="flex gap-6">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-clay/10 border border-clay/20 flex items-center justify-center text-clay font-bold text-sm shadow-sm">{i+1}</div>
-                      <div>
-                        <h4 className="text-xl font-bold text-moss mb-2">{item.title}</h4>
-                        <p className="font-sans text-base text-sage leading-relaxed italic">{item.desc}</p>
-                      </div>
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+              <span className="font-sans text-xs uppercase tracking-[0.4em] text-clay font-bold block mb-4 italic">The SahYogi Way</span>
+              <h2 className="text-4xl md:text-6xl text-slate mb-10 leading-tight">Legacy of Operational <br /><span className="text-clay italic">Credibility.</span></h2>
+              <div className="space-y-8">
+                {[
+                  { title: "Pan-India Reach", desc: "Operating across all major states, combining national strength with local market intelligence." },
+                  { title: "Compliance Without Compromise", desc: "PF, ESIC, TDS, and labour laws embedded in every engagement. No legal exposure." },
+                  { title: "Sector Breadth", desc: "From energy projects to retail chains to leisure destinations—we bring context and depth." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-6">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-clay/10 border border-clay/20 flex items-center justify-center text-clay font-bold text-sm shadow-sm">{i + 1}</div>
+                    <div>
+                      <h4 className="text-xl font-bold text-moss mb-2">{item.title}</h4>
+                      <p className="font-sans text-base text-sage leading-relaxed italic">{item.desc}</p>
                     </div>
-                  ))}
-                </div>
-             </div>
-             
-             <div className="bg-moss p-12 md:p-20 rounded-[3rem] text-sand shadow-2xl relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-64 h-64 bg-clay rounded-full blur-[100px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
-               <div className="relative z-10">
-                 <h3 className="text-4xl font-bold mb-8 tracking-tighter">Ready to Scale?</h3>
-                 <p className="font-sans text-xl text-sand/70 mb-10 leading-relaxed italic">
-                   We translate your business objectives into a high-performance workforce. Rapid mobilisation, full compliance, zero friction.
-                 </p>
-                 <a 
-                   href="#contact"
-                   className="inline-flex items-center gap-4 bg-clay text-white px-10 py-5 rounded-full font-sans text-xs uppercase tracking-[0.2em] font-bold hover:bg-clay/90 transition-all shadow-xl shadow-clay/20"
-                 >
-                   Connect with us <ArrowRight size={20} />
-                 </a>
-               </div>
-             </div>
-           </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-moss p-12 md:p-20 rounded-[3rem] text-sand shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-clay rounded-full blur-[100px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+              <div className="relative z-10">
+                <h3 className="text-4xl font-bold mb-8 tracking-tighter">Ready to Scale?</h3>
+                <p className="font-sans text-xl text-sand/70 mb-10 leading-relaxed italic">
+                  We translate your business objectives into a high-performance workforce. Rapid mobilisation, full compliance, zero friction.
+                </p>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-4 bg-clay text-white px-10 py-5 rounded-full font-sans text-xs uppercase tracking-[0.2em] font-bold hover:bg-clay/90 transition-all shadow-xl shadow-clay/20"
+                >
+                  Connect with us <ArrowRight size={20} />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -534,13 +534,13 @@ export default function App() {
           <div className="lg:col-span-2">
             <h2 className="text-4xl md:text-6xl text-slate mb-8 tracking-tight">Let’s talk about your <span className="text-clay italic">requirement.</span></h2>
             <p className="font-sans text-lg text-sage mb-12 italic">Whether scaling a workforce or launching a property—we respond within one business day.</p>
-            
+
             <div className="space-y-8 mb-12">
               <div className="flex items-start gap-4">
                 <MapPin className="text-clay mt-1" size={20} />
                 <div>
                   <h4 className="font-bold text-moss mb-1">Registered Office</h4>
-                  <p className="font-sans text-sm text-sage">3rd Floor, Rolex Square, City Centre, <br/>Gwalior – 474011, Madhya Pradesh</p>
+                  <p className="font-sans text-sm text-sage">3rd Floor, Rolex Square, City Centre, <br />Gwalior – 474011, Madhya Pradesh</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -621,7 +621,7 @@ export default function App() {
                 A trusted partner for workforce solutions and hospitality asset management across India’s growth sectors. Gwalior-headquartered, Pan-India in reach.
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-sans text-[10px] uppercase tracking-widest text-clay font-bold mb-8">Staffing</h4>
               <ul className="space-y-4 font-sans text-xs text-sand/60">
