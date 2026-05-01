@@ -30,8 +30,11 @@ ALLOWED_DIVISIONS = {
     'Other Services',
 }
 
-@app.route('/api/contact', methods=['POST'])
+@app.route('/api/contact', methods=['POST', 'OPTIONS'])
 def contact():
+    if request.method == 'OPTIONS':
+        return '', 200
+
     if not request.is_json:
         return jsonify({'success': False, 'error': 'Content-Type must be application/json'}), 415
 
