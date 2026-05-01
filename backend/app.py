@@ -13,7 +13,7 @@ import os
 # Allow importing from the project root
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from backend.api.index import app
+from api.contact import app
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
