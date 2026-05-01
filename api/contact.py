@@ -31,10 +31,7 @@ ALLOWED_DIVISIONS = {
 }
 
 @app.route('/api/contact', methods=['POST', 'OPTIONS'])
-@app.route('/backend/api/index.py', methods=['POST', 'OPTIONS'])
-@app.route('/', defaults={'path': ''}, methods=['POST', 'OPTIONS'])
-@app.route('/<path:path>', methods=['POST', 'OPTIONS'])
-def contact(path=""):
+def contact():
     if request.method == 'OPTIONS':
         return '', 200
 
