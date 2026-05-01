@@ -57,7 +57,7 @@ def contact():
     if division and division not in ALLOWED_DIVISIONS:
         return jsonify({'success': False, 'error': 'Invalid division selected'}), 400
 
-    owner_email = os.getenv('OWNER_EMAIL') or os.getenv('RECIPIENT_EMAIL')
+    owner_email = os.getenv('RECIPIENT_EMAIL')
     if not owner_email:
         return jsonify({'success': False, 'error': 'Server configuration error (missing OWNER_EMAIL).'}), 500
 
@@ -82,7 +82,7 @@ def contact():
     """
 
     try:
-        from_email = os.getenv('RESEND_FROM_EMAIL') or os.getenv('SENDER_EMAIL', 'onboarding@resend.dev')
+        from_email = os.getenv('SENDER_EMAIL')
         resend.Emails.send({
             "from": from_email,
             "to": [owner_email],
