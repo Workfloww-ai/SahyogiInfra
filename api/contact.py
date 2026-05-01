@@ -59,7 +59,7 @@ def contact():
 
     owner_email = os.getenv('RECIPIENT_EMAIL')
     if not owner_email:
-        return jsonify({'success': False, 'error': 'Server configuration error (missing OWNER_EMAIL).'}), 500
+        return jsonify({'success': False, 'error': 'Server configuration error (missing RECIPIENT_EMAIL).'}), 500
 
     if not resend.api_key:
         return jsonify({'success': False, 'error': 'Server configuration error (missing RESEND_API_KEY).'}), 500
