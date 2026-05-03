@@ -542,13 +542,13 @@ export default function App() {
                   <p className="font-sans text-sm text-sage">3rd Floor, Rolex Square, City Centre, <br />Gwalior – 474011, Madhya Pradesh</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <Phone className="text-clay mt-1" size={20} />
                 <div>
                   <h4 className="font-bold text-moss mb-1">Direct Line</h4>
                   <p className="font-sans text-sm text-sage">+91 99937 00000</p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-start gap-4">
                 <Mail className="text-clay mt-1" size={20} />
                 <div>
