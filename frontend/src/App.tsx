@@ -7,7 +7,6 @@ import {
   MapPin,
   Phone,
   Mail,
-  Globe,
   Clock,
   ShieldCheck,
   Building2,
@@ -238,8 +237,8 @@ export default function App() {
               SahYogi InfraCare brings two decades of operational credibility to workforce staffing and hospitality management.
             </p>
             <div className="flex items-center gap-4 mb-12 p-6 bg-moss/5 rounded-2xl border border-moss/10 w-fit">
-              <div className="w-12 h-12 bg-clay rounded-full flex items-center justify-center text-white shrink-0">
-                <Globe size={24} />
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 border border-moss/10 shadow-sm p-3">
+                <img src="/logo.png" alt="SahYogi Logo" className="w-full h-full object-contain" />
               </div>
               <p className="font-sans text-sm md:text-base font-bold text-moss italic leading-snug">
                 "We combine a national network with <br className="hidden md:block" /> local intelligence."
@@ -376,8 +375,8 @@ export default function App() {
 
       {/* Differentiators (Why Clients Stay With Us) */}
       <section className="py-24 px-6 md:px-16 bg-moss text-sand relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
-          <Globe size={600} />
+        <div className="absolute top-1/2 -translate-y-1/2 right-0 w-1/2 h-full opacity-[0.03] pointer-events-none flex justify-end items-center">
+          <img src="/logo.png" alt="SahYogi Logo Background" className="w-[600px] h-[600px] object-contain translate-x-1/4" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -543,13 +542,13 @@ export default function App() {
                   <p className="font-sans text-sm text-sage">3rd Floor, Rolex Square, City Centre, <br />Gwalior – 474011, Madhya Pradesh</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <Phone className="text-clay mt-1" size={20} />
                 <div>
                   <h4 className="font-bold text-moss mb-1">Direct Line</h4>
                   <p className="font-sans text-sm text-sage">+91 99937 00000</p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-start gap-4">
                 <Mail className="text-clay mt-1" size={20} />
                 <div>
