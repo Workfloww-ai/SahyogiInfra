@@ -655,7 +655,7 @@ export default function App() {
           <div className="pt-12 border-t border-sand/10 flex flex-col md:flex-row justify-between items-center gap-6 font-sans text-[10px] uppercase tracking-widest text-sand/40">
             <p>© {new Date().getFullYear()} SahYogi InfraCare Pvt Ltd. All rights reserved. Gwalior, Madhya Pradesh.</p>
             <div className="flex gap-8">
-              <a href="#" className="hover:text-sand transition-colors">Privacy Policy</a>
+              <a href="/privacy.html" target="_blank" rel="noopener noreferrer" className="hover:text-sand transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-sand transition-colors">Terms of Engagement</a>
             </div>
           </div>
