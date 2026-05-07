@@ -8,7 +8,7 @@ resend.api_key = os.getenv('RESEND_API_KEY')
 try:
     response = resend.Emails.send({
         "from": "no-reply@sahyogi.net.in",
-        "to": ["amit.tiwari@sahyogi.net.in"],
+        # "to": ["amit.tiwari@sahyogi.net.in"],
         # "subject": "Hello World",
         # "html": "<p>Congrats on sending your <strong>first email</strong>!</p>"
     })
