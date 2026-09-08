@@ -1,353 +1,606 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SahYogi Privacy Policy & Consent Notice</title>
-    <style>
-      :root{
-        --sand: #f9f9f9;
-        --sage: #666666;
-        --moss: #0b5b31;
-        --clay: #ed1c24;
-        --slate: #3c3c3b;
-        --cream: #ffffff;
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SahYogi Privacy Policy & Consent Notice</title>
+  <style>
+    :root {
+      --sand: #f9f9f9;
+      --sage: #666666;
+      --moss: #0b5b31;
+      --clay: #ed1c24;
+      --slate: #3c3c3b;
+      --cream: #ffffff;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      background: linear-gradient(180deg, #f6fbfd 0%, var(--sand) 100%);
+      color: var(--slate);
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto 80px;
+    }
+
+    /* Hero header */
+    .hero {
+      background: linear-gradient(90deg, rgba(11, 91, 49, 1) 0%, rgba(237, 28, 36, 1) 100%);
+      color: white;
+      padding: 34px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(11, 91, 49, 0.08);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+
+    /* Content card */
+    .card {
+      background: var(--cream);
+      margin-top: -36px;
+      border-radius: 14px;
+      padding: 28px 34px;
+      box-shadow: 0 20px 40px rgba(20, 20, 20, 0.06);
+    }
+
+    .meta {
+      color: var(--moss);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .lead {
+      color: var(--sage);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: var(--slate);
+      margin-top: 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 1.25em;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 8px;
+    }
+
+    h4 {
+      color: var(--slate);
+      margin-top: 24px;
+      margin-bottom: 8px;
+      font-size: 1.1em;
+    }
+
+    .sec {
+      display: block;
+      margin-top: 24px;
+    }
+
+    .num {
+      color: var(--moss);
+      font-weight: 700;
+      min-width: 28px;
+      display: inline-block;
+    }
+
+    .heading-text {
+      font-weight: 700;
+    }
+
+    .content {
+      margin-left: 40px;
+      margin-top: 12px;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.95em;
+    }
+
+    th,
+    td {
+      border: 1px solid #e6e6e6;
+      padding: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: var(--sand);
+      color: var(--slate);
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+
+    /* Note blocks */
+    .drafting-note {
+      background-color: #fff9e6;
+      border-left: 4px solid #ffcc00;
+      padding: 14px;
+      margin: 20px 0;
+      font-size: 0.9em;
+      color: #665200;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .drafting-note strong {
+      color: #b38f00;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eaeaea;
+      text-align: center;
+      color: var(--sage);
+      font-size: 0.85em;
+    }
+
+    /* Buttons */
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 10px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--moss);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #084725;
+    }
+
+    .btn-ghost {
+      background: white;
+      border: 1px solid #e6e6e6;
+      color: var(--slate);
+    }
+
+    .btn-ghost:hover {
+      background: #f5f5f5;
+    }
+
+    @media (max-width:720px) {
+      .hero h1 {
+        font-size: 24px;
       }
-      html,body{height:100%;}
-      body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background: linear-gradient(180deg, #f6fbfd 0%, var(--sand) 100%); color: var(--slate); margin:0; padding:40px 20px; line-height: 1.6; }
-      .page { max-width: 980px; margin: 0 auto 80px; }
 
-      /* Hero header */
-      .hero { background: linear-gradient(90deg, rgba(11,91,49,1) 0%, rgba(237,28,36,1) 100%); color: white; padding:34px; border-radius:14px; box-shadow: 0 10px 30px rgba(11,91,49,0.08); }
-      .hero h1 { margin:0; font-size:32px; letter-spacing: -0.02em; }
-      .hero p { margin-top:8px; opacity:0.9; }
-
-      /* Content card */
-      .card { background: var(--cream); margin-top: -36px; border-radius:14px; padding:28px 34px; box-shadow: 0 20px 40px rgba(20,20,20,0.06); }
-      .meta { color: var(--moss); font-weight:600; margin-bottom:12px; }
-      .lead { color: var(--sage); margin-bottom:18px; }
-
-      h3 { color: var(--slate); margin-top:32px; display:flex; align-items:flex-start; gap:12px; font-size: 1.25em; border-bottom: 1px solid #eaeaea; padding-bottom: 8px; }
-      h4 { color: var(--slate); margin-top: 24px; margin-bottom: 8px; font-size: 1.1em; }
-      .sec { display:block; margin-top:24px; }
-      .num { color: var(--moss); font-weight:700; min-width:28px; display:inline-block; }
-      .heading-text{ font-weight:700; }
-      .content{ margin-left:40px; margin-top: 12px; }
-      ul { margin-left:20px; padding-left: 0; }
-      li { margin-bottom: 8px; }
-
-      /* Tables */
-      table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.95em; }
-      th, td { border: 1px solid #e6e6e6; padding: 14px; text-align: left; vertical-align: top; }
-      th { background-color: var(--sand); color: var(--slate); font-weight: 600; }
-      tr:nth-child(even) { background-color: #fcfcfc; }
-
-      /* Note blocks */
-      .drafting-note { background-color: #fff9e6; border-left: 4px solid #ffcc00; padding: 14px; margin: 20px 0; font-size: 0.9em; color: #665200; border-radius: 0 4px 4px 0; }
-      .drafting-note strong { color: #b38f00; }
-
-      /* Footer */
-      .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eaeaea; text-align: center; color: var(--sage); font-size: 0.85em; }
-
-      /* Buttons */
-      .btn-row { display:flex; gap:12px; margin-top:32px; }
-      .btn { padding:10px 18px; border-radius:10px; display:inline-block; text-decoration:none; font-weight:600; transition: all 0.2s; }
-      .btn-primary { background: var(--moss); color: white; }
-      .btn-primary:hover { background: #084725; }
-      .btn-ghost { background: white; border:1px solid #e6e6e6; color: var(--slate); }
-      .btn-ghost:hover { background: #f5f5f5; }
-
-      @media (max-width:720px){ 
-        .hero h1{font-size:24px;} 
-        .page{padding:0 12px;} 
-        .content{margin-left:0;} 
-        .num{margin-bottom:0;} 
-        h3{flex-direction:column; gap:4px; margin-bottom:12px;} 
-        table { display: block; overflow-x: auto; white-space: nowrap; }
+      .page {
+        padding: 0 12px;
       }
-    </style>
-  </head>
-  <body>
-    <div class="page">
-      <div class="hero">
-        <h1>SahYogi Privacy Policy &amp; Consent Notice</h1>
-        <p>Last updated: 8 September 2026 | Issued by SahYogi InfraCare Pvt. Ltd.</p>
-      </div>
 
-      <div class="card">
-        <p class="meta">Applicable to the SahYogi Website (sahyogi.net.in) and the SahYogi Mobile Application</p>
-        
-        <section class="sec">
-          <h3><span class="num">1.</span><span class="heading-text">Introduction &amp; Statutory Scope</span></h3>
-          <div class="content">
-            <p>This Privacy Policy and Consent Notice (“Privacy Policy”) is issued by SahYogi InfraCare Pvt. Ltd. (“SahYogi”, “we”, “us”, or “our”) pursuant to Section 5 of the Digital Personal Data Protection Act, 2023 (“DPDP Act”) and the Digital Personal Data Protection Rules, 2025 (“DPDP Rules”) notified by the Ministry of Electronics and Information Technology on 13 November 2025.</p>
-            <p>This Privacy Policy governs the collection, use, storage, sharing and erasure of digital personal data across two platforms operated by SahYogi:</p>
-            <ul>
-              <li>the SahYogi website at <strong>sahyogi.net.in</strong>; and</li>
-              <li>the SahYogi mobile application, available on Google Play (“<strong>SahYogi App</strong>”),</li>
-            </ul>
-            <p>(together, the “Platforms”), through which SahYogi connects gig workers with businesses seeking staffing, facility-management and hospitality support (“Gig-Work Services”).</p>
-            <p>This notice is presented as a standalone document, independent of any other terms of service or agreement, in accordance with Rule 3(a) of the DPDP Rules, so that it can be read and understood on its own.</p>
-          </div>
-        </section>
+      .content {
+        margin-left: 0;
+      }
 
-        <section class="sec">
-          <h3><span class="num">2.</span><span class="heading-text">Who This Policy Covers</span></h3>
-          <div class="content">
-            <p>This Policy applies to:</p>
-            <ul>
-              <li>Gig workers who register on the SahYogi App to find work assignments;</li>
-              <li>Visitors to the SahYogi website who submit enquiries for services or staffing;</li>
-              <li>Prospective and existing business clients who engage SahYogi for staffing, hospitality or facility-management mandates, to the extent their personnel or authorised representatives share personal data with us.</li>
-            </ul>
-            <p>Each of the above is a “Data Principal” under the DPDP Act. The SahYogi App and website are intended for use by individuals aged 18 years and above. See Clause 9 (Children and Persons with Disabilities) for further detail.</p>
-          </div>
-        </section>
+      .num {
+        margin-bottom: 0;
+      }
 
-        <section class="sec">
-          <h3><span class="num">3.</span><span class="heading-text">Itemised Personal Data Collection &amp; Purpose Matrix</span></h3>
-          <div class="content">
-            <p>In compliance with Rule 3(b) of the DPDP Rules — which requires an itemised description of personal data, the specified purpose(s) of processing, and a description of the goods, services or uses enabled — the table below sets out what we collect, where, why, and under what legal basis.</p>
-            
-            <table>
-              <thead>
-                <tr>
-                  <th>Personal Data Item</th>
-                  <th>Collection Platform</th>
-                  <th>Specified Purpose of Processing</th>
-                  <th>Legal Basis &amp; Retention</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Masked Aadhaar Card / Virtual ID (VID)</strong></td>
-                  <td>SahYogi App</td>
-                  <td>Identity verification (KYC) at onboarding and periodic re-verification of gig workers before assignment.</td>
-                  <td>Consent under the DPDP Act, 2023 and applicable UIDAI circulars. Erased on completion of verification, subject to fraud-prevention retention.</td>
-                </tr>
-                <tr>
-                  <td><strong>PAN Card Details</strong></td>
-                  <td>SahYogi App</td>
-                  <td>Identity verification, disbursement of gig-work payouts, and tax withholding (TDS) compliance.</td>
-                  <td>Legal obligation under the Income-tax Act, 1961 and anti-money-laundering norms. Retained for 8 years as required by statute.</td>
-                </tr>
-                <tr>
-                  <td><strong>Bank Account / UPI Details</strong></td>
-                  <td>SahYogi App</td>
-                  <td>Direct disbursement of wages, incentives and reimbursements earned through gig assignments.</td>
-                  <td>Consent (DPDP Act, 2023) and legal obligation under RBI payment-system directions. Retained for the duration of engagement plus the statutory financial-record period.</td>
-                </tr>
-                <tr>
-                  <td><strong>10th &amp; 12th Marksheets / Skill Certificates</strong></td>
-                  <td>SahYogi App</td>
-                  <td>Credential verification, qualification assessment and matching to suitable gig/staffing mandates.</td>
-                  <td>Consent (DPDP Act, 2023). Retained for the duration of engagement or deleted on request, subject to Section 4.</td>
-                </tr>
-                <tr>
-                  <td><strong>Location / GPS Data</strong></td>
-                  <td>SahYogi App</td>
-                  <td>Matching gig workers to nearby job assignments, verifying attendance at a worksite, and enabling client/employer coordination.</td>
-                  <td>Consent (DPDP Act, 2023). Collected only while the app is in active use for job matching; not used for continuous background tracking.</td>
-                </tr>
-                <tr>
-                  <td><strong>Work Assignment, Attendance &amp; Performance Data</strong></td>
-                  <td>SahYogi App</td>
-                  <td>Recording task completion, hours worked, ratings and feedback for payout calculation and quality assurance.</td>
-                  <td>Consent and contractual necessity (DPDP Act, 2023). Retained for the duration of engagement and a limited period thereafter for dispute resolution.</td>
-                </tr>
-                <tr>
-                  <td><strong>Contact / Enquiry Data (Name, Email, Phone, Organisation)</strong></td>
-                  <td>Website (sahyogi.net.in) &amp; SahYogi App</td>
-                  <td>Responding to service enquiries, business communications, and recruitment/staffing enquiries from prospective clients and gig workers.</td>
-                  <td>Consent (DPDP Act, 2023). Retained until enquiry resolution or account deactivation.</td>
-                </tr>
-                <tr>
-                  <td><strong>Account Credentials (Name, Email, Password/OTP)</strong></td>
-                  <td>SahYogi App</td>
-                  <td>Account creation, user authentication and delivery of app-based gig-work services.</td>
-                  <td>Consent (DPDP Act, 2023). Retained while the account remains active and for a limited period after deactivation for security logs.</td>
-                </tr>
-              </tbody>
-            </table>
+      h3 {
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 12px;
+      }
 
-            <div class="drafting-note">
-              <strong>DRAFTING NOTE — CONFIRM BEFORE PUBLISHING:</strong> Confirm whether SahYogi additionally collects police-verification / background-check data, emergency-contact details, or biometric attendance data (e.g., selfie-based check-in), as gig platforms commonly do. If so, add a corresponding row above with its specific purpose and retention period.
-            </div>
-          </div>
-        </section>
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
 
-        <section class="sec">
-          <h3><span class="num">4.</span><span class="heading-text">Safeguards for Government Identifiers &amp; Financial/Educational Records</span></h3>
-          <div class="content">
-            <h4>4.1 Aadhaar Masking Protocol</h4>
-            <p>In strict compliance with UIDAI directives and Section 8(1) of the DPDP Act:</p>
-            <ul>
-              <li>We accept only Masked Aadhaar copies (the first 8 digits obscured) or Virtual IDs (VIDs) within the SahYogi App.</li>
-              <li>We do not extract, store or process raw 12-digit Aadhaar numbers or biometric data linked to Aadhaar.</li>
-              <li>Any unmasked Aadhaar document inadvertently uploaded is automatically redacted or erased.</li>
-            </ul>
-            
-            <h4>4.2 Financial &amp; Educational Records</h4>
-            <p>PAN details, bank/UPI details, and educational certificates uploaded through the App are stored using bank-grade encryption (AES-256 at rest, TLS 1.3 in transit) and access is restricted through Role-Based Access Control (RBAC) on a strict need-to-know basis, as part of the “reasonable security safeguards” required under Section 8(5) of the DPDP Act and Rule 6 of the DPDP Rules.</p>
-          </div>
-        </section>
+<body>
+  <div class="page">
+    <div class="hero">
+      <h1>SahYogi Privacy Policy &amp; Consent Notice</h1>
+      <p>Last updated: 8 September 2026 | Issued by SahYogi InfraCare Pvt. Ltd.</p>
+    </div>
 
-        <section class="sec">
-          <h3><span class="num">5.</span><span class="heading-text">How We Use Data to Provide Gig-Work Services</span></h3>
-          <div class="content">
-            <p>Because SahYogi operates a job-matching platform, certain personal data is necessarily shared with the businesses to which a gig worker is assigned, and with our verification and payment partners. We share only what is necessary for the specified purpose:</p>
-            <ul>
-              <li>Name, photograph, verified credentials and relevant work history are shared with a client business at the time of a work assignment, so that the business can confirm the worker's identity and suitability.</li>
-              <li>Bank/UPI details are shared only with our payment-processing partner for the purpose of wage disbursement, and are not shared with client businesses.</li>
-              <li>Attendance and performance data recorded during an assignment may be shared with the relevant client business and used internally to compute payouts and ratings.</li>
-            </ul>
-            <p>SahYogi does not sell or trade personal data for marketing purposes, and does not share Aadhaar, PAN or bank details with client businesses.</p>
-          </div>
-        </section>
+    <div class="card">
+      <p class="meta">Applicable to the SahYogi Website (sahyogi.net.in) and the SahYogi Mobile Application</p>
 
-        <section class="sec">
-          <h3><span class="num">6.</span><span class="heading-text">Cross-Border Data Transfer</span></h3>
-          <div class="content">
-            <p>SahYogi's data may be stored or processed using cloud infrastructure providers that operate data centres in India. Where any processing occurs outside India, it is undertaken only in accordance with Section 16 of the DPDP Act. As of the date of this Policy, the Central Government has not yet notified a list of restricted countries or territories under Section 16; this Policy will be updated to reflect any such notification once issued.</p>
-          </div>
-        </section>
-
-        <section class="sec">
-          <h3><span class="num">7.</span><span class="heading-text">Data Retention &amp; Erasure</span></h3>
-          <div class="content">
-            <p>We retain personal data only for as long as necessary to fulfil the specified purpose or to satisfy a statutory retention requirement (e.g., 8 years for PAN/financial records under tax law). Once the purpose is fulfilled and no legal retention obligation applies, data is erased or anonymised.</p>
-            <p>Where SahYogi is required to erase personal data on the expiry of a defined retention period, and the Data Principal has not accessed the Platform or otherwise exercised their rights within that period, we will send a reminder at least 48 hours before erasure, in accordance with Rule 8 of the DPDP Rules, giving the Data Principal an opportunity to log in and retain the data if they wish.</p>
-            
-            <div class="drafting-note">
-              <strong>DRAFTING NOTE — CONFIRM BEFORE PUBLISHING:</strong> The Third Schedule to the DPDP Rules imposes a mandatory 3-year inactivity-based erasure rule specifically on large e-commerce, online-gaming and social-media entities crossing prescribed user thresholds. Confirm SahYogi's registered user base against these thresholds; if not crossed, this Policy correctly treats the 48-hour reminder as a general good-practice safeguard rather than a mandatory large-platform obligation.
-            </div>
-          </div>
-        </section>
-
-        <section class="sec">
-          <h3><span class="num">8.</span><span class="heading-text">Security Safeguards &amp; Breach Notification</span></h3>
-          <div class="content">
-            <p>In accordance with Rule 6 of the DPDP Rules, we implement reasonable technical and organisational safeguards, including encryption, access controls, monitoring for unauthorised access, and retention of relevant logs to enable detection and investigation of a personal data breach.</p>
-            <p>If a personal data breach occurs, SahYogi will, without delay, notify affected Data Principals with a description of the breach and its likely consequences, and will report the breach to the Data Protection Board of India within the timelines prescribed under the DPDP Rules.</p>
-          </div>
-        </section>
-
-        <section class="sec">
-          <h3><span class="num">9.</span><span class="heading-text">Children and Persons with Disabilities</span></h3>
-          <div class="content">
-            <p>The SahYogi App and Gig-Work Services are intended for individuals aged 18 years and above and are not directed at children. We do not knowingly collect personal data of a child (a person below 18 years of age) or undertake tracking, behavioural monitoring, or targeted advertising directed at children, in accordance with Section 9 of the DPDP Act.</p>
-            <p>Where the processing of personal data of a person with a disability who has a lawful guardian is undertaken, such processing will be carried out with the consent of the lawful guardian, in accordance with Section 9(5) of the DPDP Act and the DPDP Rules.</p>
-          </div>
-        </section>
-
-        <section class="sec">
-          <h3><span class="num">10.</span><span class="heading-text">Basis and Manner of Consent</span></h3>
-          <div class="content">
-            <p>Before collecting personal data for a new purpose, we present a notice that (a) is understandable independently of any other document, (b) itemises the personal data sought and the specified purpose(s), in plain language, and (c) provides a direct link within the App to withdraw consent, exercise your rights, or raise a grievance — as required by Rule 3 of the DPDP Rules.</p>
-            <p>Consent given by you is free, specific, informed, unconditional and unambiguous, indicated by a clear affirmative action, and limited to the personal data necessary for the specified purpose. You may withdraw consent at any time through the SahYogi App settings, with the withdrawal process being as simple as the process by which consent was given.</p>
-            <p>As and when the Consent Manager framework under the DPDP Rules becomes operational (the DPDP Rules provide for this from November 2026), SahYogi will update its consent-collection mechanisms accordingly and this Policy will be revised to reflect integration with a registered Consent Manager, where applicable.</p>
-          </div>
-        </section>
-
-        <section class="sec">
-          <h3><span class="num">11.</span><span class="heading-text">Third-Party Data Sharing &amp; Data Processors</span></h3>
-          <div class="content">
-            <p>We do not sell or trade personal data collected via the Platforms. Data is shared only with:</p>
-            <ul>
-              <li><strong>Authorised Data Processors:</strong> cloud infrastructure providers, KYC verification partners, and payment-processing services, each bound by contract to implement security controls under Section 8(2) of the DPDP Act;</li>
-              <li><strong>Client businesses:</strong> strictly to the extent described in Clause 5, for the purpose of a specific gig-work assignment;</li>
-              <li><strong>Statutory and regulatory authorities:</strong> where legally mandated.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="sec">
-          <h3><span class="num">12.</span><span class="heading-text">Rights of the Data Principal</span></h3>
-          <div class="content">
-            <p>Under Chapter III of the DPDP Act, you have the following rights in respect of your personal data processed via the Platforms:</p>
-            
-            <table>
-              <thead>
-                <tr>
-                  <th>Right</th>
-                  <th>What It Means</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Right to Access &amp; Summary</strong></td>
-                  <td>Obtain a summary of the personal data being processed and the identities of Data Processors with whom it has been shared, and the purpose of such processing.</td>
-                </tr>
-                <tr>
-                  <td><strong>Right to Correction &amp; Erasure</strong></td>
-                  <td>Request correction of inaccurate or misleading data, completion of incomplete data, and erasure of data that is no longer necessary for the purpose for which it was collected — subject to any statutory retention requirement (e.g., tax records under the Income-tax Act, 1961).</td>
-                </tr>
-                <tr>
-                  <td><strong>Right to Grievance Redressal</strong></td>
-                  <td>Register a grievance with our Grievance Officer regarding any act or omission in relation to the processing of your personal data, or the exercise of your rights.</td>
-                </tr>
-                <tr>
-                  <td><strong>Right to Withdraw Consent</strong></td>
-                  <td>Withdraw consent at any time via the SahYogi App settings or by emailing our Grievance Officer, with ease comparable to that with which consent was given. Withdrawal does not affect the lawfulness of processing carried out prior to withdrawal.</td>
-                </tr>
-                <tr>
-                  <td><strong>Right to Nominate</strong></td>
-                  <td>Nominate another individual to exercise these rights on your behalf in the event of your death or incapacity.</td>
-                </tr>
-                <tr>
-                  <td><strong>Right to Approach the Data Protection Board</strong></td>
-                  <td>If a grievance is not resolved to your satisfaction within the timelines below, you may file a complaint with the Data Protection Board of India.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="sec">
-          <h3><span class="num">13.</span><span class="heading-text">Grievance Redressal &amp; Contact Details</span></h3>
-          <div class="content">
-            <p>In accordance with Section 8(10) of the DPDP Act, you may direct any query, consent-withdrawal request, or grievance to our Grievance Officer:</p>
-            <p>
-              <strong>Grievance Officer:</strong> Mr. Amit Tiwari<br>
-              <strong>Entity:</strong> SahYogi InfraCare Pvt. Ltd.<br>
-              <strong>Address:</strong> 3rd Floor, Rolex Square, City Centre, Gwalior – 474011, Madhya Pradesh, India<br>
-              <strong>Email:</strong> <a href="mailto:amit.tiwari@sahyogi.net.in">amit.tiwari@sahyogi.net.in</a><br>
-              <strong>Response Time:</strong> Grievances will be acknowledged and addressed within 30 days of receipt.
-            </p>
-            <p>If you are not satisfied with the resolution provided, you may escalate your complaint to the Data Protection Board of India through its official online portal.</p>
-
-            <div class="btn-row">
-              <a href="/" class="btn btn-ghost">Back to Home</a>
-              <a href="mailto:amit.tiwari@sahyogi.net.in" class="btn btn-primary">Contact Grievance Officer</a>
-            </div>
-          </div>
-        </section>
-
-        <section class="sec">
-          <h3><span class="num">14.</span><span class="heading-text">Language Accessibility</span></h3>
-          <div class="content">
-            <p>In accordance with Section 5(3) of the DPDP Act, this Privacy Policy and Consent Notice is made available on sahyogi.net.in and within the SahYogi App in English and, on request, in any of the 22 languages specified in the Eighth Schedule to the Constitution of India.</p>
-          </div>
-        </section>
-
-        <section class="sec">
-          <h3><span class="num">15.</span><span class="heading-text">Third-Party Links</span></h3>
-          <div class="content">
-            <p>The Platforms may contain links to social media profiles or external partner sites. SahYogi does not control, and is not responsible for, the privacy practices of such external sites.</p>
-          </div>
-        </section>
-
-        <section class="sec">
-          <h3><span class="num">16.</span><span class="heading-text">Changes to This Policy</span></h3>
-          <div class="content">
-            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, our services, or applicable law, including further rules, schedules or guidance issued under the DPDP Act. The “Last updated” date at the top of this Policy will be revised accordingly, and material changes will be notified to you through the SahYogi App or by email prior to taking effect.</p>
-          </div>
-        </section>
-        
-        <div class="footer">
-          Page 1 of 2 | SahYogi InfraCare Pvt. Ltd. — Confidential Draft for Internal Review
+      <section class="sec">
+        <h3><span class="num">1.</span><span class="heading-text">Introduction &amp; Statutory Scope</span></h3>
+        <div class="content">
+          <p>This Privacy Policy and Consent Notice (“Privacy Policy”) is issued by SahYogi InfraCare Pvt. Ltd.
+            (“SahYogi”, “we”, “us”, or “our”) pursuant to Section 5 of the Digital Personal Data Protection Act, 2023
+            (“DPDP Act”) and the Digital Personal Data Protection Rules, 2025 (“DPDP Rules”) notified by the Ministry of
+            Electronics and Information Technology on 13 November 2025.</p>
+          <p>This Privacy Policy governs the collection, use, storage, sharing and erasure of digital personal data
+            across two platforms operated by SahYogi:</p>
+          <ul>
+            <li>the SahYogi website at <strong>sahyogi.net.in</strong>; and</li>
+            <li>the SahYogi mobile application, available on Google Play (“<strong>SahYogi App</strong>”),</li>
+          </ul>
+          <p>(together, the “Platforms”), through which SahYogi connects gig workers with businesses seeking staffing,
+            facility-management and hospitality support (“Gig-Work Services”).</p>
+          <p>This notice is presented as a standalone document, independent of any other terms of service or agreement,
+            in accordance with Rule 3(a) of the DPDP Rules, so that it can be read and understood on its own.</p>
         </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">2.</span><span class="heading-text">Who This Policy Covers</span></h3>
+        <div class="content">
+          <p>This Policy applies to:</p>
+          <ul>
+            <li>Gig workers who register on the SahYogi App to find work assignments;</li>
+            <li>Visitors to the SahYogi website who submit enquiries for services or staffing;</li>
+            <li>Prospective and existing business clients who engage SahYogi for staffing, hospitality or
+              facility-management mandates, to the extent their personnel or authorised representatives share personal
+              data with us.</li>
+          </ul>
+          <p>Each of the above is a “Data Principal” under the DPDP Act. The SahYogi App and website are intended for
+            use by individuals aged 18 years and above. See Clause 9 (Children and Persons with Disabilities) for
+            further detail.</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">3.</span><span class="heading-text">Itemised Personal Data Collection &amp; Purpose
+            Matrix</span></h3>
+        <div class="content">
+          <p>In compliance with Rule 3(b) of the DPDP Rules — which requires an itemised description of personal data,
+            the specified purpose(s) of processing, and a description of the goods, services or uses enabled — the table
+            below sets out what we collect, where, why, and under what legal basis.</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Personal Data Item</th>
+                <th>Collection Platform</th>
+                <th>Specified Purpose of Processing</th>
+                <th>Legal Basis &amp; Retention</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Masked Aadhaar Card / Virtual ID (VID)</strong></td>
+                <td>SahYogi App</td>
+                <td>Identity verification (KYC) at onboarding and periodic re-verification of gig workers before
+                  assignment.</td>
+                <td>Consent under the DPDP Act, 2023 and applicable UIDAI circulars. Erased on completion of
+                  verification, subject to fraud-prevention retention.</td>
+              </tr>
+              <tr>
+                <td><strong>PAN Card Details</strong></td>
+                <td>SahYogi App</td>
+                <td>Identity verification, disbursement of gig-work payouts, and tax withholding (TDS) compliance.</td>
+                <td>Legal obligation under the Income-tax Act, 1961 and anti-money-laundering norms. Retained for 8
+                  years as required by statute.</td>
+              </tr>
+              <tr>
+                <td><strong>Bank Account / UPI Details</strong></td>
+                <td>SahYogi App</td>
+                <td>Direct disbursement of wages, incentives and reimbursements earned through gig assignments.</td>
+                <td>Consent (DPDP Act, 2023) and legal obligation under RBI payment-system directions. Retained for the
+                  duration of engagement plus the statutory financial-record period.</td>
+              </tr>
+              <tr>
+                <td><strong>10th &amp; 12th Marksheets / Skill Certificates</strong></td>
+                <td>SahYogi App</td>
+                <td>Credential verification, qualification assessment and matching to suitable gig/staffing mandates.
+                </td>
+                <td>Consent (DPDP Act, 2023). Retained for the duration of engagement or deleted on request, subject to
+                  Section 4.</td>
+              </tr>
+              <tr>
+                <td><strong>Location / GPS Data</strong></td>
+                <td>SahYogi App</td>
+                <td>Matching gig workers to nearby job assignments, verifying attendance at a worksite, and enabling
+                  client/employer coordination.</td>
+                <td>Consent (DPDP Act, 2023). Collected only while the app is in active use for job matching; not used
+                  for continuous background tracking.</td>
+              </tr>
+              <tr>
+                <td><strong>Work Assignment, Attendance &amp; Performance Data</strong></td>
+                <td>SahYogi App</td>
+                <td>Recording task completion, hours worked, ratings and feedback for payout calculation and quality
+                  assurance.</td>
+                <td>Consent and contractual necessity (DPDP Act, 2023). Retained for the duration of engagement and a
+                  limited period thereafter for dispute resolution.</td>
+              </tr>
+              <tr>
+                <td><strong>Contact / Enquiry Data (Name, Email, Phone, Organisation)</strong></td>
+                <td>Website (sahyogi.net.in) &amp; SahYogi App</td>
+                <td>Responding to service enquiries, business communications, and recruitment/staffing enquiries from
+                  prospective clients and gig workers.</td>
+                <td>Consent (DPDP Act, 2023). Retained until enquiry resolution or account deactivation.</td>
+              </tr>
+              <tr>
+                <td><strong>Account Credentials (Name, Email, Password/OTP)</strong></td>
+                <td>SahYogi App</td>
+                <td>Account creation, user authentication and delivery of app-based gig-work services.</td>
+                <td>Consent (DPDP Act, 2023). Retained while the account remains active and for a limited period after
+                  deactivation for security logs.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">4.</span><span class="heading-text">Safeguards for Government Identifiers &amp;
+            Financial/Educational Records</span></h3>
+        <div class="content">
+          <h4>4.1 Aadhaar Masking Protocol</h4>
+          <p>In strict compliance with UIDAI directives and Section 8(1) of the DPDP Act:</p>
+          <ul>
+            <li>We accept only Masked Aadhaar copies (the first 8 digits obscured) or Virtual IDs (VIDs) within the
+              SahYogi App.</li>
+            <li>We do not extract, store or process raw 12-digit Aadhaar numbers or biometric data linked to Aadhaar.
+            </li>
+            <li>Any unmasked Aadhaar document inadvertently uploaded is automatically redacted or erased.</li>
+          </ul>
+
+          <h4>4.2 Financial &amp; Educational Records</h4>
+          <p>PAN details, bank/UPI details, and educational certificates uploaded through the App are stored using
+            bank-grade encryption (AES-256 at rest, TLS 1.3 in transit) and access is restricted through Role-Based
+            Access Control (RBAC) on a strict need-to-know basis, as part of the “reasonable security safeguards”
+            required under Section 8(5) of the DPDP Act and Rule 6 of the DPDP Rules.</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">5.</span><span class="heading-text">How We Use Data to Provide Gig-Work Services</span>
+        </h3>
+        <div class="content">
+          <p>Because SahYogi operates a job-matching platform, certain personal data is necessarily shared with the
+            businesses to which a gig worker is assigned, and with our verification and payment partners. We share only
+            what is necessary for the specified purpose:</p>
+          <ul>
+            <li>Name, photograph, verified credentials and relevant work history are shared with a client business at
+              the time of a work assignment, so that the business can confirm the worker's identity and suitability.
+            </li>
+            <li>Bank/UPI details are shared only with our payment-processing partner for the purpose of wage
+              disbursement, and are not shared with client businesses.</li>
+            <li>Attendance and performance data recorded during an assignment may be shared with the relevant client
+              business and used internally to compute payouts and ratings.</li>
+          </ul>
+          <p>SahYogi does not sell or trade personal data for marketing purposes, and does not share Aadhaar, PAN or
+            bank details with client businesses.</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">6.</span><span class="heading-text">Cross-Border Data Transfer</span></h3>
+        <div class="content">
+          <p>SahYogi's data may be stored or processed using cloud infrastructure providers that operate data centres in
+            India. Where any processing occurs outside India, it is undertaken only in accordance with Section 16 of the
+            DPDP Act. As of the date of this Policy, the Central Government has not yet notified a list of restricted
+            countries or territories under Section 16; this Policy will be updated to reflect any such notification once
+            issued.</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">7.</span><span class="heading-text">Data Retention &amp; Erasure</span></h3>
+        <div class="content">
+          <p>We retain personal data only for as long as necessary to fulfil the specified purpose or to satisfy a
+            statutory retention requirement (e.g., 8 years for PAN/financial records under tax law). Once the purpose is
+            fulfilled and no legal retention obligation applies, data is erased or anonymised.</p>
+          <p>Where SahYogi is required to erase personal data on the expiry of a defined retention period, and the Data
+            Principal has not accessed the Platform or otherwise exercised their rights within that period, we will send
+            a reminder at least 48 hours before erasure, in accordance with Rule 8 of the DPDP Rules, giving the Data
+            Principal an opportunity to log in and retain the data if they wish.</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">8.</span><span class="heading-text">Security Safeguards &amp; Breach Notification</span>
+        </h3>
+        <div class="content">
+          <p>In accordance with Rule 6 of the DPDP Rules, we implement reasonable technical and organisational
+            safeguards, including encryption, access controls, monitoring for unauthorised access, and retention of
+            relevant logs to enable detection and investigation of a personal data breach.</p>
+          <p>If a personal data breach occurs, SahYogi will, without delay, notify affected Data Principals with a
+            description of the breach and its likely consequences, and will report the breach to the Data Protection
+            Board of India within the timelines prescribed under the DPDP Rules.</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">9.</span><span class="heading-text">Children and Persons with Disabilities</span></h3>
+        <div class="content">
+          <p>The SahYogi App and Gig-Work Services are intended for individuals aged 18 years and above and are not
+            directed at children. We do not knowingly collect personal data of a child (a person below 18 years of age)
+            or undertake tracking, behavioural monitoring, or targeted advertising directed at children, in accordance
+            with Section 9 of the DPDP Act.</p>
+          <p>Where the processing of personal data of a person with a disability who has a lawful guardian is
+            undertaken, such processing will be carried out with the consent of the lawful guardian, in accordance with
+            Section 9(5) of the DPDP Act and the DPDP Rules.</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">10.</span><span class="heading-text">Basis and Manner of Consent</span></h3>
+        <div class="content">
+          <p>Before collecting personal data for a new purpose, we present a notice that (a) is understandable
+            independently of any other document, (b) itemises the personal data sought and the specified purpose(s), in
+            plain language, and (c) provides a direct link within the App to withdraw consent, exercise your rights, or
+            raise a grievance — as required by Rule 3 of the DPDP Rules.</p>
+          <p>Consent given by you is free, specific, informed, unconditional and unambiguous, indicated by a clear
+            affirmative action, and limited to the personal data necessary for the specified purpose. You may withdraw
+            consent at any time through the SahYogi App settings, with the withdrawal process being as simple as the
+            process by which consent was given.</p>
+          <p>As and when the Consent Manager framework under the DPDP Rules becomes operational (the DPDP Rules provide
+            for this from November 2026), SahYogi will update its consent-collection mechanisms accordingly and this
+            Policy will be revised to reflect integration with a registered Consent Manager, where applicable.</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">11.</span><span class="heading-text">Third-Party Data Sharing &amp; Data Processors</span>
+        </h3>
+        <div class="content">
+          <p>We do not sell or trade personal data collected via the Platforms. Data is shared only with:</p>
+          <ul>
+            <li><strong>Authorised Data Processors:</strong> cloud infrastructure providers, KYC verification partners,
+              and payment-processing services, each bound by contract to implement security controls under Section 8(2)
+              of the DPDP Act;</li>
+            <li><strong>Client businesses:</strong> strictly to the extent described in Clause 5, for the purpose of a
+              specific gig-work assignment;</li>
+            <li><strong>Statutory and regulatory authorities:</strong> where legally mandated.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">12.</span><span class="heading-text">Rights of the Data Principal</span></h3>
+        <div class="content">
+          <p>Under Chapter III of the DPDP Act, you have the following rights in respect of your personal data processed
+            via the Platforms:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Right</th>
+                <th>What It Means</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Right to Access &amp; Summary</strong></td>
+                <td>Obtain a summary of the personal data being processed and the identities of Data Processors with
+                  whom it has been shared, and the purpose of such processing.</td>
+              </tr>
+              <tr>
+                <td><strong>Right to Correction &amp; Erasure</strong></td>
+                <td>Request correction of inaccurate or misleading data, completion of incomplete data, and erasure of
+                  data that is no longer necessary for the purpose for which it was collected — subject to any statutory
+                  retention requirement (e.g., tax records under the Income-tax Act, 1961).</td>
+              </tr>
+              <tr>
+                <td><strong>Right to Grievance Redressal</strong></td>
+                <td>Register a grievance with our Grievance Officer regarding any act or omission in relation to the
+                  processing of your personal data, or the exercise of your rights.</td>
+              </tr>
+              <tr>
+                <td><strong>Right to Withdraw Consent</strong></td>
+                <td>Withdraw consent at any time via the SahYogi App settings or by emailing our Grievance Officer, with
+                  ease comparable to that with which consent was given. Withdrawal does not affect the lawfulness of
+                  processing carried out prior to withdrawal.</td>
+              </tr>
+              <tr>
+                <td><strong>Right to Nominate</strong></td>
+                <td>Nominate another individual to exercise these rights on your behalf in the event of your death or
+                  incapacity.</td>
+              </tr>
+              <tr>
+                <td><strong>Right to Approach the Data Protection Board</strong></td>
+                <td>If a grievance is not resolved to your satisfaction within the timelines below, you may file a
+                  complaint with the Data Protection Board of India.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">13.</span><span class="heading-text">Grievance Redressal &amp; Contact Details</span></h3>
+        <div class="content">
+          <p>In accordance with Section 8(10) of the DPDP Act, you may direct any query, consent-withdrawal request, or
+            grievance to our Grievance Officer:</p>
+          <p>
+            <strong>Grievance Officer:</strong> Mr. Amit Tiwari<br>
+            <strong>Entity:</strong> SahYogi InfraCare Pvt. Ltd.<br>
+            <strong>Address:</strong> 3rd Floor, Rolex Square, City Centre, Gwalior – 474011, Madhya Pradesh, India<br>
+            <strong>Email:</strong> <a href="mailto:amit.tiwari@sahyogi.net.in">amit.tiwari@sahyogi.net.in</a><br>
+            <strong>Response Time:</strong> Grievances will be acknowledged and addressed within 30 days of receipt.
+          </p>
+          <p>If you are not satisfied with the resolution provided, you may escalate your complaint to the Data
+            Protection Board of India through its official online portal.</p>
+
+          <div class="btn-row">
+            <a href="/" class="btn btn-ghost">Back to Home</a>
+            <a href="mailto:amit.tiwari@sahyogi.net.in" class="btn btn-primary">Contact Grievance Officer</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">14.</span><span class="heading-text">Language Accessibility</span></h3>
+        <div class="content">
+          <p>In accordance with Section 5(3) of the DPDP Act, this Privacy Policy and Consent Notice is made available
+            on sahyogi.net.in and within the SahYogi App in English and, on request, in any of the 22 languages
+            specified in the Eighth Schedule to the Constitution of India.</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">15.</span><span class="heading-text">Third-Party Links</span></h3>
+        <div class="content">
+          <p>The Platforms may contain links to social media profiles or external partner sites. SahYogi does not
+            control, and is not responsible for, the privacy practices of such external sites.</p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h3><span class="num">16.</span><span class="heading-text">Changes to This Policy</span></h3>
+        <div class="content">
+          <p>We may update this Privacy Policy from time to time to reflect changes in our practices, our services, or
+            applicable law, including further rules, schedules or guidance issued under the DPDP Act. The “Last updated”
+            date at the top of this Policy will be revised accordingly, and material changes will be notified to you
+            through the SahYogi App or by email prior to taking effect.</p>
+        </div>
+      </section>
+
+      <div class="footer">
+        Page 1 of 2 | SahYogi InfraCare Pvt. Ltd. — Confidential Draft for Internal Review
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
