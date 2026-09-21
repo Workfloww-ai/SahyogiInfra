@@ -18,6 +18,8 @@ import {
   Award
 } from "lucide-react";
 import { useState } from "react";
+import AppFeaturePage from "./AppFeaturePage";
+import AppPopup from "./AppPopup";
 
 const industries = [
   "Infrastructure", "Construction", "Manufacturing", "FMCG", "Retail",
@@ -88,15 +90,16 @@ const processSteps = [
 const Logo = ({ className = "" }: { className?: string }) => (
   <div className={`relative flex items-center justify-center ${className}`}>
     <img
-      src="/logo.png"
+      src="/newlogo.png"
       alt="SahYogi InfraCare Logo"
-      className="h-16 w-auto md:h-20 object-contain drop-shadow-sm"
+      className="h-20 w-auto md:h-28 object-contain drop-shadow-sm"
     />
   </div>
 );
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState<'home' | 'app'>('home');
   const [formData, setFormData] = useState({
     fullName: '',
     organisation: '',
@@ -145,9 +148,14 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-sand text-slate selection:bg-clay/20 font-sans">
-      {/* Navigation */}
-      <header className="h-20 bg-white/90 backdrop-blur-md border-b border-moss/10 sticky top-0 z-[100] px-6 md:px-16 flex items-center justify-between">
+    <>
+      {currentPage === 'app' ? (
+        <AppFeaturePage onBack={() => setCurrentPage('home')} />
+      ) : (
+        <div className="min-h-screen bg-sand text-slate selection:bg-clay/20 font-sans">
+          <AppPopup onJoinUs={() => setCurrentPage('app')} />
+          {/* Navigation */}
+      <header className="py-4 bg-white/90 backdrop-blur-md border-b border-moss/10 sticky top-0 z-[100] px-6 md:px-16 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Logo />
           <div className="flex flex-col">
@@ -238,7 +246,7 @@ export default function App() {
             </p>
             <div className="flex items-center gap-4 mb-12 p-6 bg-moss/5 rounded-2xl border border-moss/10 w-fit">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 border border-moss/10 shadow-sm p-3">
-                <img src="/logo.png" alt="SahYogi Logo" className="w-full h-full object-contain" />
+                <img src="/newlogo.png" alt="SahYogi Logo" className="w-full h-full object-contain" />
               </div>
               <p className="font-sans text-sm md:text-base font-bold text-moss italic leading-snug">
                 "We combine a national network with <br className="hidden md:block" /> local intelligence."
@@ -376,7 +384,7 @@ export default function App() {
       {/* Differentiators (Why Clients Stay With Us) */}
       <section className="py-24 px-6 md:px-16 bg-moss text-sand relative overflow-hidden">
         <div className="absolute top-1/2 -translate-y-1/2 right-0 w-1/2 h-full opacity-[0.03] pointer-events-none flex justify-end items-center">
-          <img src="/logo.png" alt="SahYogi Logo Background" className="w-[600px] h-[600px] object-contain translate-x-1/4" />
+          <img src="/newlogo.png" alt="SahYogi Logo Background" className="w-[600px] h-[600px] object-contain translate-x-1/4" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -676,6 +684,8 @@ export default function App() {
         }
       `}</style>
     </div>
+      )}
+    </>
   );
 }
 
