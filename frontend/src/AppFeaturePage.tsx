@@ -54,7 +54,7 @@ export default function AppFeaturePage({ onBack }: { onBack: () => void }) {
           </button>
         </div>
         <div className="flex items-center gap-4">
-          <img src="/newlogo.png" alt="SahYogi Logo" className="h-12 md:h-16 w-auto object-contain" />
+          <img src="/logo.png" alt="SahYogi Logo" className="h-12 md:h-16 w-auto object-contain" />
           <span className="text-lg md:text-xl font-black tracking-tight leading-none hidden sm:inline mt-1"><span className="text-moss">Sah</span><span className="text-red-600">Yogi</span><span className="text-moss"> APP</span></span>
         </div>
       </header>
