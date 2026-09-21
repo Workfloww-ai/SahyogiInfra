@@ -228,7 +228,7 @@ export default function AppFeaturePage({ onBack }: { onBack: () => void }) {
       {/* Footer minimal */}
       <footer className="bg-moss py-16 text-center text-sand/50 text-sm border-t border-sand/10 flex flex-col items-center gap-8">
         <div className="bg-white p-4 rounded-[2rem] shadow-sm border border-slate/5">
-          <img src="/newlogo.png" alt="SahYogi Logo" className="h-20 md:h-28 w-auto object-contain" />
+          <img src="/logo.png" alt="SahYogi Logo" className="h-20 md:h-28 w-auto object-contain" />
         </div>
         <p className="font-sans text-[10px] uppercase tracking-widest">© {new Date().getFullYear()} SahYogi InfraCare Pvt Ltd. All rights reserved.</p>
       </footer>
