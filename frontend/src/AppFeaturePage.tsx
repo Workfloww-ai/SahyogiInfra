@@ -12,9 +12,9 @@ const appFeatures = [
   {
     id: "02",
     title: "Empowering Businesses",
-    desc: "Managing a flexible workforce shouldn't be a full-time headache. Sahyogi provides businesses and store managers with a seamless way to:",
+    desc: "Managing a flexible workforce shouldn't be a full-time headache. Sahyogi provides businesses with a seamless way to:",
     points: [
-      "Request Staff on Demand: Quickly broadcast shift requirements to a pool of ready-to-work professionals.",
+      "Request Staff on Demand: On demand workforce, quickly broadcast shift requirements to a pool of ready-to-work professionals.",
       "Track Operations in Real-Time: Monitor staff attendance and location to ensure your business is always running smoothly.",
       "Simplify Payroll: Let our automated finance engine handle shift calculations, payouts, and financial reconciliation without the paperwork."
     ]
@@ -22,7 +22,7 @@ const appFeatures = [
   {
     id: "03",
     title: "Championing the Workforce",
-    desc: "We believe in empowering our workforce—our \"Sahyogis.\" Through our easy-to-use mobile app, workers can take control of their careers by:",
+    desc: "We believe in empowering our workforce—our \"Sahyogis.\" Through our easy-to-use mobile app, workaholic can take control of their careers by:",
     points: [
       "Choosing Flexible Shifts: Accepting jobs that fit their schedule and location preferences.",
       "Tracking Daily Earnings: Enjoying complete transparency with real-time updates on completed shifts and upcoming payouts.",
@@ -32,7 +32,7 @@ const appFeatures = [
   {
     id: "04",
     title: "Seamless End-to-End Management",
-    desc: "Sahyogi eliminates the chaos of traditional staffing by bringing every step of the process into one unified platform. From the moment a business requests a worker to the final payout, everything is tracked, verified, and managed digitally. No more messy spreadsheets, lost timesheets, or miscommunication—just smooth, reliable operations.",
+    desc: "Sahyogi platform eliminates the chaos of traditional staffing by bringing every step of the process into one unified platform. From the moment a business requests a workaholic to the final payout, everything is tracked, verified, and managed digitally. No more messy spreadsheets, lost timesheets, or miscommunication—just smooth, reliable operations.",
   },
   {
     id: "05",
@@ -65,10 +65,10 @@ export default function AppFeaturePage({ onBack }: { onBack: () => void }) {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="font-sans text-[11px] uppercase tracking-[0.4em] text-clay font-bold block mb-4">Your Premier Staffing Partner</span>
             <h1 className="text-5xl md:text-7xl font-black text-slate mb-8 tracking-tighter leading-tight">
-              Ready to transform your <span className="text-clay">workforce operations?</span>
+              Transforming future of <span className="text-clay">flexible work</span>
             </h1>
             <p className="text-xl text-sage mb-10 leading-relaxed">
-              Join Sahyogi today. A platform where businesses find reliable talent, and workers find flexible opportunities.
+              Join Sahyogi today. A platform where businesses find reliable talent, & workaholics find flexible opportunities.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#download" className="bg-moss text-white px-8 py-4 rounded font-sans text-xs uppercase tracking-widest font-bold hover:bg-moss/90 transition-all flex items-center gap-3">
@@ -177,7 +177,7 @@ export default function AppFeaturePage({ onBack }: { onBack: () => void }) {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">Ready to get started?</h2>
           <p className="text-xl text-sand/80 mb-12 italic">
-            Join thousands of businesses and workers who are transforming the way they work.
+            Join thousands of businesses and Workaholics who are transforming the way they work.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8">
             <div className="bg-white text-moss p-10 rounded-3xl shadow-2xl flex flex-col items-center transform hover:scale-105 transition-transform">
