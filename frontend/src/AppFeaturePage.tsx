@@ -93,7 +93,7 @@ export default function AppFeaturePage({ onBack }: { onBack: () => void }) {
               </div>
               <h3 className="text-3xl font-black text-slate mb-3 tracking-tight">Scan to Download</h3>
               <p className="text-sage text-base font-sans mb-8">Available on Android</p>
-              <a href="#download" className="inline-flex items-center justify-center bg-clay text-white px-8 py-4 rounded-xl font-sans text-sm uppercase tracking-widest font-bold hover:bg-clay/90 transition-all shadow-[0_8px_30px_rgba(237,28,36,0.3)] hover:shadow-[0_8px_30px_rgba(237,28,36,0.5)] w-full">
+              <a href="https://play.google.com/store/apps/details?id=com.workfloww.sahyogi&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-clay text-white px-8 py-4 rounded-xl font-sans text-sm uppercase tracking-widest font-bold hover:bg-clay/90 transition-all shadow-[0_8px_30px_rgba(237,28,36,0.3)] hover:shadow-[0_8px_30px_rgba(237,28,36,0.5)] w-full">
                 DOWNLOAD APP
               </a>
             </div>
