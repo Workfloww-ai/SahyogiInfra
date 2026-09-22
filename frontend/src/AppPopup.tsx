@@ -51,7 +51,7 @@ export default function AppPopup({ onJoinUs }: { onJoinUs: () => void }) {
                 Get the <span className="italic"><span className="text-moss">Sah</span><span className="text-clay">Yogi</span> App</span>
               </h3>
               <p className="text-sage text-sm font-sans leading-relaxed px-4">
-                Find flexible opportunities or reliable talent instantly.
+                Find flexible opportunities instantly.
               </p>
             </div>
 
@@ -69,7 +69,7 @@ export default function AppPopup({ onJoinUs }: { onJoinUs: () => void }) {
 
                 {/* QR Code */}
                 <div className="relative z-10 p-1.5 bg-white rounded-lg shadow-sm">
-                  <QRCode 
+                  <QRCode
                     value="https://play.google.com/store/apps/details?id=com.workfloww.sahyogi&hl=en_IN"
                     size={110}
                     fgColor="#0b5b31"
