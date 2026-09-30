@@ -209,7 +209,7 @@ export default function AppFeaturePage({ onBack }: { onBack: () => void }) {
               <div>
                 <h4 className="font-bold text-moss text-xl mb-2">Email Us</h4>
                 <p className="text-sage mb-4 text-sm leading-relaxed">We usually reply within 24 hours.</p>
-                <a href="mailto:amit.tiwari@sahyogi.net.in" className="font-bold text-clay underline decoration-clay underline-offset-4 text-sm">amit.tiwari@sahyogi.net.in</a>
+                <a href="mailto:amit.tiwari@sahyogi.net.in" className="font-bold text-clay underline decoration-clay underline-offset-4 text-sm">support@sahyogi.net.in</a>
               </div>
             </div>
             <div className="bg-sand p-8 md:p-10 rounded-3xl border border-moss/10 flex items-start gap-6 shadow-sm">
