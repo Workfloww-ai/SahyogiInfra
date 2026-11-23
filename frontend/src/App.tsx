@@ -664,7 +664,7 @@ export default function App() {
                 <p>© {new Date().getFullYear()} SahYogi InfraCare Pvt Ltd. All rights reserved. Gwalior, Madhya Pradesh.</p>
                 <div className="flex gap-8">
                   <a href="/privacy.html" rel="noopener noreferrer" className="hover:text-sand transition-colors">Privacy Policy</a>
-                  <a href="/terms.html" rel="noopener noreferrer" className="hover:text-sand transition-colors">Terms of Engagement</a>
+                  <a href="/terms-and-conditions.html" rel="noopener noreferrer" className="hover:text-sand transition-colors">Terms of Engagement</a>
                 </div>
               </div>
             </div>
